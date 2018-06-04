@@ -11,9 +11,9 @@ import pandas as pd
 import numpy as np
 
 # User input
-filepath="Predictions_VSURF_SOFTPROB.csv"
+filepath="Data/RF_prob_results.csv"
 sep=","
-prob_columns=['ACS', 'AGRI', 'BARE', 'DEPR', 'PLAN', 'VEG']
+prob_columns=['ACS','BARE','PLAN','UNPLAN','VEG']
 
 # Open the csv in a dataframe
 input_df=pd.read_csv(filepath, delimiter=sep)
@@ -41,4 +41,4 @@ output_df['uncert_level']=output_df['first_prop']-output_df['second_prop']
 ## Export
 path,extension=os.path.splitext(filepath)
 output_path=path+"_uncertainty"+extension
-output_df.to_csv(output_path , sep=sep)
+output_df.to_csv(output_path , sep=sep,  index=False)
