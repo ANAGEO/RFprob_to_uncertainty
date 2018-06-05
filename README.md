@@ -1,5 +1,6 @@
 # Random Forest probabilities to uncertainty measure
 
+### Description
 This repository contains a piece of Python code used to compute "uncertainty level" for a Random Forest (RF) probabilistic output.
 
 From a input .csv similar to the following :
@@ -32,3 +33,10 @@ Here after are the meaning of the different new columns:
 - uncert\_level : "Uncertainty level" which is simply the difference between first\_prop  and  second\_prop. 
 
 A low value of the "uncert\_level" indicates a high uncertainty of classification from RF.
+
+
+### Versions
+V1.0 -> Python code used in the publication GRIPPA & al. 2018
+
+### Todos
+* Add a version of the code that enables for the same table manipulation (cross-tab) with Postgresql (for very large dataset management).
